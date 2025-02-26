@@ -1,0 +1,71 @@
+/* Product Actions */
+.product-actions {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there isn't enough space */
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center; /* Centers the buttons */
+}
+/* Action Button as Box */
+.action-button {
+    display: flex;
+    flex-direction: column; /* Allows content (icon + text) to stack */
+    align-items: center; /* Center the content */
+    justify-content: center;
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    padding: 20px;
+    background-color: white; /* Neutral background for box */
+    color: #333; /* Default text color */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for box effect */
+    text-align: center; /* Centers text inside box */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.action-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Button Icon Styling */
+.button-icon {
+    font-size: 40px; /* Larger icon size for prominence */
+    margin-bottom: 15px; /* Space between icon and text */
+}
+
+/* Add Product Button */
+.add-product {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+/* Delete Product Button */
+.delete-product {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+/* Update Product Button */
+.update-product {
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .action-button {
+        width: 160px; /* Smaller width for smaller screens */
+        height: 160px; /* Smaller height for smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .button-icon {
+        font-size: 32px; /* Adjust icon size */
+    }
+}

@@ -1,0 +1,98 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Side Navbar Styling */
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #c3253f;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    padding: 20px 10px;
+    box-sizing: border-box;
+    color: white;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Content area: to ensure the table doesn't overlap with the sidenav */
+.main-content {
+    margin-left: 250px;  /* Margin equal to the width of the sidenav */
+    padding: 20px;       /* Optional padding */
+}
+
+/* General styling for users table */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.users-table th,
+.users-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.users-table th {
+    background-color: #c3253f;
+    color: white;
+}
+
+.users-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.users-table tr:hover {
+    background-color: #ddd;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Fade-in animation for the table */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Optional: Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;  /* Make sure to reset margin for smaller screens */
+    }
+    .users-table {
+        font-size: 14px;  /* Smaller font size for tables */
+    }
+}
